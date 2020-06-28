@@ -1,6 +1,6 @@
 <div class="container">
   @foreach($questions as $question)
-  {{ $question->body }}
+  <a href="/q/{{ $question->id }}">{{ $question->body }}</a>
   <br>
   <small>{{ $question->created_at }}</small>
   <br>
