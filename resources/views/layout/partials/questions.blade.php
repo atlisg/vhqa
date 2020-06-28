@@ -2,7 +2,7 @@
   @foreach($questions as $question)
   <a href="/questions/{{ $question->id }}">{{ $question->body }}</a>
   <br>
-  <small>{{ $question->created_at }}</small>
+  <small>{{ $question->created_at->diffForHumans() }}</small>
   <br>
   <small>{{ $question->answers->count() }} answers</small>
   <br>
