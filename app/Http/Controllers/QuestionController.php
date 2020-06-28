@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Answer;
 use App\Question;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,20 @@ class QuestionController extends Controller
 
         $question->save();
 
-        return redirect()->route('q', ['question' => $question->id]);
+        return redirect()->route('questions', ['question' => $question->id]);
+    }
+
+    public function answer(Request $request, $question_id)
+    {
+        // TODO: Validate
+
+        $answer = new Answer;
+
+        $answer->body = $request->body;
+        $answer->question_id = $question_id;
+
+        $answer->save();
+
+        return redirect()->route('questions', ['question' => $question_id]);
     }
 }

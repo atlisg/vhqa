@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/q/{question}', 'QuestionController@index')->name('q');
+Route::get('/questions/{question}', 'QuestionController@index')->name('questions');
 
-Route::post('/question', 'QuestionController@store');
+Route::post('/questions', 'QuestionController@store');
+
+Route::post('/questions/{question}/answer', 'QuestionController@answer');
