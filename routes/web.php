@@ -13,3 +13,5 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/q/{question}', 'QuestionController@index');
