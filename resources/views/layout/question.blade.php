@@ -20,13 +20,11 @@
     <br>
     @endforeach
     <hr>
-    <div class="container">
-      <form action="/questions/{{ $question->id }}/answer" method="POST">
-        @csrf
-        <textarea name="body" rows="3" class="form-control" placeholder="Answer the question"></textarea>
-        <button type="submit" class="btn btn-primary float-right">Submit answer</button>
-      </form>
-    </div>
+    <form action="/questions/{{ $question->id }}/answer" method="POST">
+      @csrf
+      <textarea name="body" rows="3" class="form-control" placeholder="Answer the question"></textarea>
+      <button type="submit" class="btn btn-primary float-right">Submit answer</button>
+    </form>
   </div>
   @include('layout.partials.footer-scripts')
 </body>
