@@ -17,6 +17,7 @@ class HomeController extends Controller
       'What is the most effective way to promote veganism?',
       'Where are we? What the hell is going on?',
       'When will all animal products be banned?',
+      'Do the martians have two sexes, like we do?',
       'Which one is your favorite?'
     ];
     $random = Arr::random($placeholders);

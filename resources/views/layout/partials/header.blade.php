@@ -1,5 +1,3 @@
-<div class="container">
-  <h1 class="text-center">
-    <a href="/">Q & A</a>
-  </h1>
-</div>
+<h1 class="text-center my-5">
+  <a href="/">Q & A</a>
+</h1>

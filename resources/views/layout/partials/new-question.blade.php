@@ -1,7 +1,8 @@
-<div class="container">
-  <form action="/questions" method="POST">
-    @csrf
-    <textarea name="body" rows="3" class="form-control" placeholder="{{ $placeholder }}">{{ old('body') }}</textarea>
+<form action="/questions" method="POST">
+  @csrf
+  <div class="col-md-8 mx-auto mb-2">
+    <textarea name="question" rows="3" class="form-control mb-3" placeholder="{{ $placeholder }}">{{ old('question') }}</textarea>
+
     @if ($errors->any())
     <div class="alert alert-danger">
       <ul>
@@ -11,6 +12,9 @@
       </ul>
     </div>
     @endif
-    <button type="submit" class="btn btn-primary float-right">Ask away</button>
-  </form>
-</div>
+
+    <div class="text-right">
+      <button type="submit" class="btn btn-primary my-3">Ask away</button>
+    </div>
+  </div>
+</form>

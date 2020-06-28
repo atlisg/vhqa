@@ -20,12 +20,12 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'body' => ['required', 'min:5', 'ends_with:?'],
+            'question' => ['required', 'min:5', 'ends_with:?'],
         ]);
 
         $question = new Question;
 
-        $question->body = $request->body;
+        $question->body = $request->question;
 
         $question->save();
 
@@ -35,12 +35,12 @@ class QuestionController extends Controller
     public function answer(Request $request, $question_id)
     {
         $request->validate([
-            'body' => ['required', 'min:5'],
+            'answer' => ['required', 'min:5'],
         ]);
 
         $answer = new Answer;
 
-        $answer->body = $request->body;
+        $answer->body = $request->answer;
         $answer->question_id = $question_id;
 
         $answer->save();

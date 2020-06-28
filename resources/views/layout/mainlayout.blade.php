@@ -6,11 +6,12 @@
 </head>
 
 <body>
-  @include('layout.partials.header')
-  @include('layout.partials.new-question')
-  <hr>
-  @include('layout.partials.questions')
-  @include('layout.partials.footer-scripts')
+  <div class="container">
+    @include('layout.partials.header')
+    @include('layout.partials.new-question')
+    @include('layout.partials.questions')
+    @include('layout.partials.footer-scripts')
+  </div>
 </body>
 
 </html>
