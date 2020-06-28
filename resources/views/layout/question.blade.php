@@ -22,7 +22,16 @@
     <hr>
     <form action="/questions/{{ $question->id }}/answer" method="POST">
       @csrf
-      <textarea name="body" rows="3" class="form-control" placeholder="Answer the question"></textarea>
+      <textarea name="body" rows="3" class="form-control" placeholder="Answer the question">{{ old('body') }}</textarea>
+      @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
       <button type="submit" class="btn btn-primary float-right">Submit answer</button>
     </form>
   </div>
