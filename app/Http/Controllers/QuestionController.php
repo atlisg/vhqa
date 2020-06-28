@@ -15,4 +15,17 @@ class QuestionController extends Controller
             'question' => $question
         ]);
     }
+
+    public function store(Request $request)
+    {
+        // TODO: Validate
+
+        $question = new Question;
+
+        $question->body = $request->body;
+
+        $question->save();
+
+        return redirect()->route('q', ['question' => $question->id]);
+    }
 }

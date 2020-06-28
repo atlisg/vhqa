@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,4 +13,6 @@ use Illuminate\Support\Facades\DB;
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/q/{question}', 'QuestionController@index');
+Route::get('/q/{question}', 'QuestionController@index')->name('q');
+
+Route::post('/question', 'QuestionController@store');

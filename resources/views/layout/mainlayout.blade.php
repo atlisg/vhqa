@@ -7,7 +7,7 @@
 
 <body>
   @include('layout.partials.header')
-  @include('layout.partials.question')
+  @include('layout.partials.new-question')
   <hr>
   @include('layout.partials.questions')
   @include('layout.partials.footer-scripts')
