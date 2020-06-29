@@ -9,8 +9,8 @@
   <div class="container">
     @include('layout.partials.header')
     @include('layout.partials.qa')
+    @include('layout.partials.footer-scripts')
   </div>
-  @include('layout.partials.footer-scripts')
 </body>
 
 </html>
